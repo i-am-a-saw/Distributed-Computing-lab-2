@@ -5,8 +5,8 @@
 #include "preparata_hong.h"
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    std::ios::sync_with_stdio(false); // Отключение синхронизации потоков ввода-вывод С++ с потоками С для ускорения работы cin/cout
+    std::cin.tie(nullptr); // Отключение автоматической очистки буфера cout перед каждой операцией cin
 
     // Чтение количества точек
     std::size_t n;
@@ -14,7 +14,7 @@ int main() {
 
     // Чтение координат
     std::vector<Point> points;
-    points.reserve(n);
+    points.reserve(n); // Выделение памяти
 
     for (std::size_t i = 0; i < n; ++i) {
         double x, y;
